@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Create Script</title>
+    <style>
+         body {font-family: Arial, Helvetica, sans-serif;}
+        form {border: 3px solid #f1f1f1;}
+        
+        input[type=text], input[type=password] {
+          width: 50%;
+          padding: 12px 20px;
+          
+          margin: 15px 0;
+          display: inline-block;
+          border: 4px solid #ccc;
+          box-sizing: border-box;
+          position:center
+        }
+        h1{
+            color: rgb(121, 0, 115);
+            /* border:1px solid #ccc */
+            border:2px solid rgb(122, 12, 12);  
+            text-align:center;  
+            font-size:50px;  
+            /* background-color: lightgreen  */
+
+        }
+
+        h2{
+            color: rgb(0, 84, 158);
+        }
+        
+        button {
+          background-color: #04AA6D;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 10px;
+          border: none;
+          cursor: pointer;
+          width: 10%;
+        }
+        
+        button:hover {
+          opacity: 0.8;
+        }
+        h3{
+            color: rgb(121, 0, 115);
+            /* border:1px solid #ccc */
+            border:2px solid rgb(122, 12, 12);  
+            text-align:center;  
+            font-size:30px;  
+            /* background-color: lightgreen  */
+
+        }
+        
+table, th, td {
+  border: 1px solid;
+}
+    
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Create Script</h1>
+    </header>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <form>
+                        <!-- The label for the hidden file input is styled as a button and can be clicked to select a file -->
+                        <input type="file" id="file-input" accept=".jpeg,.jpg,.png,.gif,image/*" /><br><br>
+                        <input type="text" id="pname1" placeholder="Script Name"/><br><br>
+                        <input type="text" id="key" placeholder="Enter Key"/><br><br>
+                        <button id="createScript">Create Script</button>
+                        <button id="displayScript">Display Script</button><br>
+                    </form>
+                </div><br><br>
+            
+             </div>
+        
+<div id="div2" style="display:none">
+    <br>
+    <h1>Result Page</h1>
+    <h2>Encrypted Email:  <span id="email"></span></h2><br>
+    <h2>Script Name:<span id="pname"></span></h2><br>
+    <h2>Encrepted CID:<span id="cid1"></span></h2><br>
+</div>
+
+<div id="div1" class="container"  style="display:none">
+ <center><h3>Display Data from Blockchain</h3></center> 
+  <br><br>
+  <div class="table-responsive">          
+  <table id="myTable" class="datatable table table-bordered border-primary">
+    <thead>
+      <tr style="text-align: center; vertical-align: middle;">
+        <th scope="col">Email</th>
+        <th scope="col">Preview Name</th>
+        <th scope="col">CID</th>
+      </tr>
+    </thead>
+    <tbody id="tbody" style="text-align: center; vertical-align: middle;">
+    
+    </tbody>
+  </table>
+  </div>
+</div>
+
+   <script src="./dist/bundle3.js"></script>
+
+</body>
+
+</html>
